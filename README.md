@@ -1,2 +1,0 @@
-# DataStructuresSolutions
-My solutio
