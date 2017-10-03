@@ -6070,7 +6070,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 471ms :: artifacts dl 18ms
+[debug] :: resolution report :: resolve 501ms :: artifacts dl 20ms
 [debug] 	report for default#allsolutions-build;0.1-SNAPSHOT compile produced in D:\~~Git\Scala\DataStructuresSolutions\AllSolutions\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-allsolutions-build-compile.xml
 [debug] 	report for default#allsolutions-build;0.1-SNAPSHOT runtime produced in D:\~~Git\Scala\DataStructuresSolutions\AllSolutions\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-allsolutions-build-runtime.xml
 [debug] 	report for default#allsolutions-build;0.1-SNAPSHOT test produced in D:\~~Git\Scala\DataStructuresSolutions\AllSolutions\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-allsolutions-build-test.xml
@@ -6084,5 +6084,5 @@
 [debug] 	report for default#allsolutions-build;0.1-SNAPSHOT docs produced in D:\~~Git\Scala\DataStructuresSolutions\AllSolutions\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-allsolutions-build-docs.xml
 [debug] 	report for default#allsolutions-build;0.1-SNAPSHOT pom produced in D:\~~Git\Scala\DataStructuresSolutions\AllSolutions\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-allsolutions-build-pom.xml
 [debug] 	report for default#allsolutions-build;0.1-SNAPSHOT scala-tool produced in D:\~~Git\Scala\DataStructuresSolutions\AllSolutions\project\target\scala-2.10\sbt-0.13\resolution-cache\reports\default-allsolutions-build-scala-tool.xml
-[debug] 	resolve done (471ms resolve - 18ms download)
+[debug] 	resolve done (501ms resolve - 20ms download)
 [info] Done updating.
