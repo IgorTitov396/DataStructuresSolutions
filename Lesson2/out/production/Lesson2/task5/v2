@@ -1,0 +1,40 @@
+object Main extends App {
+  val input = io.Source.fromFile("inverse.in").getLines()
+  val output = new java.io.PrintWriter(new java.io.File("inverse.out" ))
+
+  val n = input.next().split(" ").map(_.toInt).apply(0)
+  val arr = input.next().split(" ").map(_.toInt)
+
+  def merge(leftData: (Array[Int], Int), rightData: (Array[Int], Int)): (Array[Int], Int) = {
+    var buf = leftData._2 + rightData._2
+    val (left, right) = (leftData._1, rightData._1)
+    val answ: Array[Int] = new Array[Int](left.length + right.length)
+    var (i, j) = (0, 0)
+    while (i < left.length && j < right.length) {
+      if (left(i) < right(j)) {
+        answ(i + j) = left(i)
+        i += 1
+      } else {
+        answ(i + j) = right(j)
+        j += 1
+        buf += 1
+      }
+    }
+    if (i == left.length) (j until right.length).foreach(ind => answ(ind + i) = right(ind)) else {
+      (i until left.length).foreach(ind => answ(ind + j) = left(ind))
+      buf += left.length - i
+    }
+    (answ, buf)
+  }
+
+  def mergeSort(count: Int)(array: Array[Int], leftIndex: Int, rightIndex: Int): (Array[Int], Int) = {
+    val mid = leftIndex + (rightIndex - leftIndex) / 2
+    if (rightIndex >= leftIndex + 1) (array.sortWith(_ < _), count) else {
+      merge(mergeSort(count)(array, leftIndex, mid), mergeSort(count)(array, mid + 1, rightIndex))
+    }
+  }
+
+  val res = mergeSort(0)(arr, 0, arr.length)
+  output.println(res._2)
+  output.close()
+}

@@ -1,0 +1,25 @@
+var count = 0
+def merge(left: Array[Int], right: Array[Int]): Array[Int] = {
+  val answ: Array[Int] = new Array[Int](left.length + right.length)
+  var (i, j) = (0, 0)
+  while (i < left.length && j < right.length) {
+    if (left(i) < right(j)) {
+      answ(i + j) = left(i)
+      i += 1
+    } else {
+      answ(i + j) = right(j)
+      j += 1
+      count += 1
+    }
+  }
+  if (i == left.length) (j until right.length).foreach(ind => answ(ind + i) = right(ind)) else {
+    (i until left.length).foreach(ind => answ(ind + j) = left(ind))
+    count += left.length - i
+  }
+  answ
+}
+
+def mergeSort(array: Array[Int], leftIndex: Int, rightIndex: Int): Array[Int] = {
+  val mid = leftIndex + (rightIndex - leftIndex) / 2
+  if (rightIndex >= leftIndex + 1) array.sortWith(_ < _) else merge(mergeSort(array, leftIndex, mid), mergeSort(array, mid + 1, rightIndex))
+}
