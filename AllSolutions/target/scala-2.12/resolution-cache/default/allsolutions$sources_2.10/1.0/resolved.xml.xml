@@ -4,7 +4,7 @@
 		module="allsolutions$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20171004000847"
+		publication="20171004101931"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
@@ -29,6 +29,9 @@
 		</dependency>
 		<dependency org="org.scala-lang.modules" name="scala-pickling_2.10" rev="0.10.1" transitive="false" conf="default->master(*),compile,runtime(*),runtime,compile(*),master">
 			<artifact name="scala-pickling_2.10" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.jetbrains" name="sbt-structure-extractor" rev="7.0.0+61-051fb9ba" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-structure-extractor" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="logic" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="logic" type="src" ext="jar" conf="sources" e:classifier="sources"/>
@@ -56,6 +59,9 @@
 		</dependency>
 		<dependency org="org.scala-sbt" name="tasks" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="tasks" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		</dependency>
+		<dependency org="org.jetbrains" name="sbt-idea-shell" rev="1.2+7-625c26bc" transitive="false" conf="default->compile,default(compile)" scalaVersion="2.10" sbtVersion="0.13">
+			<artifact name="sbt-idea-shell" type="src" ext="jar" conf="sources" e:classifier="sources"/>
 		</dependency>
 		<dependency org="org.scala-sbt" name="cross" rev="0.13.16" transitive="false" conf="default->compile,default(compile)">
 			<artifact name="cross" type="src" ext="jar" conf="sources" e:classifier="sources"/>

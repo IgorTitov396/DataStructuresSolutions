@@ -20,3 +20,5 @@ run
 compile
 run
 compile
+;reload; set org.jetbrains.sbt.StructureKeys.sbtStructureOptions in Global := "download resolveClassifiers resolveSbtClassifiers" ;*/*:dumpStructureTo C:/Users/i.titov1/AppData/Local/Temp/sbt-structure.xml
+all {file:/C:/Users/i.titov1/~Git/Study/DataStructuresSolutions/AllSolutions/}allsolutions/products {file:/C:/Users/i.titov1/~Git/Study/DataStructuresSolutions/AllSolutions/}allsolutions/test:products
